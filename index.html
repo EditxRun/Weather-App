@@ -26,8 +26,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: flex-start;
+        padding-top: 5vmin;
         border-radius: 3vmin;
+        gap: 3vmin;
+    }
+    .weather-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
         gap: 2vmin;
     }
     #submit{
@@ -81,12 +89,15 @@
         <h1 id="heading">Weather<span> App</span></h1>
         <input id="input" type="text" placeholder="Enter city name">
         <input id="submit" type="submit" value="Get Weather">
-        <h3 class="city-name"></h3>
-        <div class="date-and-time"></div>
-        <img src="" alt="Weather Icon" id="icon">
-        <h2 class="temperature"></h2>
-        <div class="info"></div>
-        <div class="wind-speed"></div>
+        <div class="weather-details">
+            <h3 class="city-name"></h3>
+            <div class="date-and-time"></div>
+            <img src="" alt="" id="icon">
+            <h2 class="temperature"></h2>
+            <div class="info"></div>
+            <div class="wind-speed"></div>
+        </div>
+        
     </div>
 </body>
 <script src="app.js"></script>
