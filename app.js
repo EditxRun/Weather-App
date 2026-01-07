@@ -1,5 +1,6 @@
+import { API_KEY } from "./config.js";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric";
-const apiKey = "73e038fab479217d6d82c74d9c0355fd";
+const apiKey = API_KEY;
 async function weatherShowFn(data) {
     const d = new Date();
     document.querySelector('.city-name').textContent = data.name;
