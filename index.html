@@ -4,86 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    body{
-        margin: 0;
-        padding: 0;
-        min-width: 100vw;
-        height: 100vh;
-        color: black;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(#0077ff,#87ceeb);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .wrapper{
-        width: 30%;
-        height: 78vh;
-        padding: 2vmin;
-        background: linear-gradient(to top, rgb(255, 255, 0, 0.4) , rgb(255, 255, 0, 0.8));
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 5vmin;
-        border-radius: 3vmin;
-        gap: 3vmin;
-    }
-    .weather-details{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        gap: 2vmin;
-    }
-    #submit{
-        background-color: #000000;
-        color: #fff;
-        border: none;
-        padding: 1.5vmin;
-        font-size: 2.2vmin;
-        border-radius: 1vmin;
-    }
-    #submit:active{
-        background-color: #3c3c3c;
-    }
-    #input{
-        width: 70%;
-        height: 5vmin;
-        font-size: medium;
-        padding-left: 1.5vmin;
-        border: none;
-        border-radius: 2vmin;
-    }
-    #heading{
-        color: black;
-    }
-    #heading span{
-        color: #ff0000a5;
-        font-style: italic;
-        font-weight: 700;
-    }
-    .wind-speed{
-        color: #ff0000a5;
-        font-weight: 600;
-    }
-    .date-and-time{
-        color: #ff0000a5;
-        font-weight: 600;
-    }
-    .temperature{
-        font-size: xx-large;
-    }
-    .info{
-        font-style: italic;
-        font-size: large;
-    }
-    .city-name, #heading, .temperature{
-        margin: 0;
-    }
-</style>
 <body>
     <div class="wrapper">
         <h1 id="heading">Weather<span> App</span></h1>
