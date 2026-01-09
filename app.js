@@ -1,3 +1,6 @@
+import { API_KEY } from "./config.js";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric";
+const apiKey = API_KEY;
 async function weatherShowFn(data) {
     const d = new Date();
     document.querySelector('.city-name').textContent = data.name;
@@ -15,7 +18,7 @@ function weatherFn() {
         }
         document.querySelector('#input').value = null;
         try {
-            const res = await fetch(`/api/weather?city=${cName}`);
+            const res = await fetch(`${apiUrl}&q=${cName}&appid=${apiKey}`);
             let data = await res.json();
             if (res.ok) {
                 weatherShowFn(data);
