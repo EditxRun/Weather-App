@@ -8,7 +8,7 @@ This application fetches real-time weather data using the OpenWeatherMap API bas
 ## Description
 
 The Weather Application allows users to check the current weather conditions of any city.  
-By entering a city name, users can view details such as temperature, humidity, wind speed, and overall weather condition.
+By entering a city name, users can view details such as temperature, wind speed, and overall weather condition.
 
 This project demonstrates the use of API integration, asynchronous JavaScript, and DOM manipulation.
 
@@ -52,7 +52,6 @@ https://api.openweathermap.org/data/2.5/weather
 **Parameters Used**
 - `q` – City name  
 - `appid` – Your API key  
-- `units` – metric  
 
 Note:  
 You must generate your own API key from https://openweathermap.org/
@@ -64,23 +63,23 @@ You must generate your own API key from https://openweathermap.org/
 1. Clone the repository
 2. Open the project folder  
 3. Open `index.html` in your browser  
-4. Add your OpenWeatherMap API key in `script.js`
+4. Add your OpenWeatherMap API key in `config.js`
 
 ---
 
 ## Folder Structure
 
-WEATHER-APP/
+```WEATHER-APP/
 │
 ├── .gitignore
+├── config.js
 ├── index.html
 ├── style.css
 ├── app.js
-├── config.js
 └── README.md
 
 ---
-
+```
 ## Future Enhancements
   
 - 5-day weather forecast  
