@@ -5,21 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
     <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
-        <h1 id="heading">Weather<span> App</span></h1>
-        <input id="input" type="text" placeholder="Enter city name">
-        <input id="submit" type="submit" value="Get Weather">
-        <div class="weather-details">
+        <div class="header">
+            <h1 id="heading"></h1>
+            <p>|</p>
+        </div>
+        <div class="input-submit">
+            <input id="input" type="text" placeholder="Enter city name">
+            <input id="submit" type="submit" value="Check">
+        </div>
+    </div>
+    <div class="weather-details">
+        <div>
             <h3 class="city-name"></h3>
-            <div class="date-and-time"></div>
-            <img src="" alt="" id="icon">
             <h2 class="temperature"></h2>
             <div class="info"></div>
             <div class="wind-speed"></div>
         </div>
-        
+        <div>
+            <img src="" alt="" id="icon">
+        </div>  
     </div>
 </body>
 <script type="module" src="/app.js"></script>

@@ -2,10 +2,9 @@ import { API_KEY } from "./config.js";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric";
 const apiKey = API_KEY;
 async function weatherShowFn(data) {
-    const d = new Date();
+    document.querySelector(".weather-details").style.display = "flex";
     document.querySelector('.city-name').textContent = data.name;
     document.querySelector('.wind-speed').textContent = `Wind Speed: ${data.wind.speed} m/s`;
-    document.querySelector('.date-and-time').textContent = d.toUTCString();
     document.querySelector('.info').textContent = data.weather[0].description;
     document.querySelector('.temperature').textContent = `${Math.round(data.main.temp)}°C`;
     document.querySelector('img').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
@@ -31,3 +30,18 @@ function weatherFn() {
     })
 }
 weatherFn();
+let text = "Find Your City's Weather";
+let i = 0;
+function typeWriter() {
+    if (i < text.length) {
+        document.querySelector("#heading").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+    }
+    if (i == text.length - 1) {
+        document.querySelector("p").style.display = "none";
+    }
+}
+typeWriter();
+
+
