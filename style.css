@@ -2,20 +2,42 @@
     margin: 0;
     padding: 0;
     font-family: "Space Grotesk";
-    color: black;
 }
 body{
-    height: 100vh;
-    background: rgb(52, 72, 149);
+    background-color: rgb(52, 72, 149);
+    color: black;
+}
+.content{
+    max-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 2vmin;
 }
+.mode{
+    max-height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3vmin;
+    padding: 5vmin 3vmin;
+}
+.mode button{
+    border-radius: 50%;
+    height: 8vmin;
+    width: 8vmin;
+    background-color: #8697b0;
+    border: none;
+}
+.mode #dark{
+    background-color: #2e2e2e;
+}
 .wrapper{
+    min-width: 40vw;
     padding: 5vmin;
-    background: rgb(144, 167, 201);
+    background: #8697b0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +53,6 @@ body{
 }
 #heading{
     text-align: center;
-    color: black;
     font-family: "Bitcount Single";
     font-size: 5vmin;
 }
@@ -86,6 +107,6 @@ body{
     font-size: large;
 }
 .weather-details img{
-    height: 20vmin;
-    border-radius: 20px;
+    height: 25vmin;
+    width: 25vmin;
 }

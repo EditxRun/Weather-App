@@ -43,5 +43,28 @@ function typeWriter() {
     }
 }
 typeWriter();
-
+document.querySelector("#dark").addEventListener("click", function () {
+    document.querySelector("body").style.backgroundColor = "#0c0c0c";
+    document.querySelector("body").style.color = "#949494";
+    document.querySelector(".wrapper").style.backgroundColor = "#1b1b1b";
+    input.style.backgroundColor = "#2a2a2a";
+    input.style.color = "#ffffffa4"
+    document.querySelector(".weather-details").style.backgroundColor = "#1b1b1b";
+    document.querySelector("#dark").style.border = "3px solid white"
+    document.querySelector("#light").style.border = "none"
+    document.querySelector("#submit").style.color = "black";
+    document.querySelector("#submit").style.backgroundColor = "#ffffff86";
+})
+document.querySelector("#light").addEventListener("click", function () {
+    document.querySelector("#dark").style.border = "none";
+    input.style.color = "black"
+    document.querySelector("#light").style.border = "3px solid white";
+    document.querySelector("body").style.backgroundColor = "rgb(52, 72, 149)";
+    document.querySelector(".weather-details").style.backgroundColor = "#8697b0";
+    input.style.backgroundColor = "white";
+    document.querySelector(".wrapper").style.backgroundColor = "#8697b0";
+    document.querySelector("body").style.color = "black";
+    document.querySelector("#submit").style.color = "white";
+    document.querySelector("#submit").style.backgroundColor = "black";
+})
 
