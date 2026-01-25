@@ -68,3 +68,22 @@ document.querySelector("#light").addEventListener("click", function () {
     document.querySelector("#submit").style.backgroundColor = "black";
 })
 
+navigator.geolocation.getCurrentPosition((pos) => {
+    weatherStartFn(pos.coords.latitude, pos.coords.longitude);
+}, () => {
+    console.log("Please allow location to get your current location weather status !!");
+});
+async function weatherStartFn(lat,lon) {
+    try {
+        const res = await fetch(`${apiUrl}&lat=${lat}&lon=${lon}&appid=${apiKey}`);
+        let data = await res.json();
+        if (res.ok) {
+            weatherShowFn(data);
+        } else {
+            alert('City not found. Please try again.');
+        }
+    } catch (err) {
+        console.log('Error while fetching weather data:', err);
+    };  
+}
+
